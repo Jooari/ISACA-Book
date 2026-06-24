@@ -27,32 +27,7 @@ mark{background:#fff3b0;padding:0 1px;}
 .edflag b{color:#b45309;}
 .fixed{background:#e8f6ec;}
 
-/* ===== 교정 표시 + 변경사항 패널 (편집용) ===== */
-/* 본문 수정 표시 규칙: 바뀐 텍스트를 <span class="rev" data-rev="YYYY-MM-DD" data-note="설명">…</span> 로 감쌉니다 */
-.rev{background:transparent;border-radius:2px;padding:0 1px;transition:background .15s;}
-body.showrev .rev{background:#fff3b0;box-shadow:0 0 0 1px #f0d35a inset;cursor:pointer;}
-body.showrev .rev.del{background:#ffe1e1;box-shadow:0 0 0 1px #f0a0a0 inset;text-decoration:line-through;color:#a33;}
-.rev:target{outline:2px solid #d97706;outline-offset:2px;}
-.topbar .tgl{background:#fff;color:var(--navy);}
-.topbar .tgl.on{background:#ffd84d;color:#5a3d00;}
-.revcount{display:inline-block;min-width:16px;text-align:center;background:#d97706;color:#fff;border-radius:10px;font-size:11px;padding:0 6px;margin-left:5px;}
-
-#revpanel{position:fixed;top:44px;right:0;width:360px;max-width:90vw;height:calc(100vh - 44px);overflow-y:auto;background:#fff;border-left:1px solid #dde3ec;box-shadow:-4px 0 16px rgba(0,0,0,.12);transform:translateX(100%);transition:transform .2s;z-index:20;padding:0 0 40px;}
-#revpanel.open{transform:translateX(0);}
-#revpanel .rp-head{position:sticky;top:0;background:var(--navy);color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;}
-#revpanel .rp-head b{font-size:14px;}
-#revpanel .rp-head button{background:transparent;color:#fff;border:0;font-size:18px;cursor:pointer;line-height:1;}
-#revpanel .rp-sec{font-size:11px;font-weight:800;letter-spacing:.06em;color:#8893a6;background:#f0f3f8;padding:8px 16px;border-top:1px solid #e3e8f1;}
-#revpanel .rp-log{padding:10px 16px;font-size:13px;color:#333;}
-#revpanel .rp-log .v{font-weight:700;color:var(--navy);}
-#revpanel .rp-log ul{margin:4px 0 12px;padding-left:18px;}
-#revpanel .rp-log li{margin:2px 0;line-height:1.5;}
-#revpanel .rp-item{display:block;text-decoration:none;color:#2c3340;font-size:13px;padding:9px 16px;border-bottom:1px solid #eef1f6;line-height:1.5;}
-#revpanel .rp-item:hover{background:#f3f7ff;}
-#revpanel .rp-item .rp-note{color:#1b2330;}
-#revpanel .rp-item .rp-meta{display:block;font-size:11px;color:#9aa3b2;margin-top:2px;}
-#revpanel .rp-empty{padding:14px 16px;font-size:13px;color:#8893a6;}
-@media print{.topbar,#revpanel,#toc{display:none!important;}body.showrev .rev{background:transparent!important;box-shadow:none!important;}}
+@media print{.topbar,#toc{display:none!important;}}
 
 #toc{position:fixed;top:44px;left:0;width:268px;height:calc(100vh - 44px);overflow-y:auto;background:#fbfcfe;border-right:1px solid #dde3ec;padding:10px 0 40px;transition:transform .2s;z-index:9;}
 #toc.hide{transform:translateX(-100%);}
@@ -78,16 +53,8 @@ body.tocopen #doc{margin-left:440px;padding-left:72px;box-sizing:border-box;}
 #toc a.toc-l2{font-size:12.5px;color:#56607240;color:#566072;padding:5px 18px 5px 34px;line-height:1.35;}
 #toc a.toc-l2 .tp{font-size:10.5px;}
 #toc a.toc-l1 .tp{font-size:11px;}
-</style></head><body class="tocopen"><div class="topbar"><b>『AI 신뢰의 기술』 통합원고 — 편집용 HTML</b><span><button class="navbtn" onclick="toggleToc()">☰ 목차</button><button class="navbtn tgl on" id="revToggle" onclick="toggleRev()">✎ 교정표시</button><button class="navbtn" onclick="togglePanel()">📋 변경사항<span class="revcount" id="revCount">0</span></button></span></div>
-<nav id="revpanel"><div class="rp-head"><b>변경사항 · 수정 이력</b><button onclick="togglePanel()" title="닫기">✕</button></div>
-<div class="rp-sec">판본 이력</div>
-<div class="rp-log">
-<div class="v">2026-06-24 · 1·2차 교정 통합본</div>
-<ul><li>위원별 원고 통합 및 1차·2차 교정 반영</li><li>각주·표·페이지 번호 정리</li><li>편집용 HTML로 변환(목차·검색 네비게이션 추가)</li></ul>
-</div>
-<div class="rp-sec">본문 표시 변경 <span id="revSecCount"></span></div>
-<div id="revList"></div>
-</nav><nav id="toc"><div class="toc-h">목차</div>
+</style></head><body class="tocopen"><div class="topbar"><b>『AI 신뢰의 기술』 통합원고 — 편집용 HTML</b><span><button class="navbtn" onclick="toggleToc()">☰ 목차</button></span></div>
+<nav id="toc"><div class="toc-h">목차</div>
 <a class="toc-l1" href="#p1" data-pg="1" onclick="goTo(event,1)">서문 — 시작하며<span class="tp">p.1</span></a>
 <div class="toc-part">PART 1 · 거버넌스와 전략적 프레임워크</div>
 <a class="toc-l1" href="#p7" data-pg="7" onclick="goTo(event,7)">Chapter 1. AI의 부상과 감사 환경의 변화<span class="tp">p.7</span></a>
@@ -4010,30 +3977,6 @@ body.tocopen #doc{margin-left:440px;padding-left:72px;box-sizing:border-box;}
 </div>
 <script>
 function toggleToc(){document.body.classList.toggle('tocopen');document.getElementById('toc').classList.toggle('hide');}
-/* 교정표시 ON/OFF */
-function toggleRev(){var on=document.body.classList.toggle('showrev');document.getElementById('revToggle').classList.toggle('on',on);}
-/* 변경사항 패널 열기/닫기 */
-function togglePanel(){document.getElementById('revpanel').classList.toggle('open');}
-/* 본문의 .rev 표시를 모아 패널 목록으로 생성 */
-(function(){
- document.body.classList.add('showrev');
- var marks=[].slice.call(document.querySelectorAll('.rev'));
- var list=document.getElementById('revList');
- var cnt=document.getElementById('revCount'), secCnt=document.getElementById('revSecCount');
- cnt.textContent=marks.length;
- if(!marks.length){list.innerHTML='<div class="rp-empty">이번 판에 본문 내 개별 교정 표시가 없습니다. 앞으로의 수정은 형광 표시되어 여기 자동으로 나타납니다.</div>';if(secCnt)secCnt.textContent='';return;}
- if(secCnt)secCnt.textContent='('+marks.length+'건)';
- marks.forEach(function(m,i){
-  if(!m.id)m.id='rev'+(i+1);
-  var pg='';var sec=m.closest('section.page');if(sec&&sec.dataset.page)pg='p.'+sec.dataset.page;
-  var note=m.getAttribute('data-note')||m.textContent.slice(0,40);
-  var rev=m.getAttribute('data-rev')||'';
-  var a=document.createElement('a');a.className='rp-item';a.href='#'+m.id;
-  a.innerHTML='<span class="rp-note">'+note.replace(/</g,'&lt;')+'</span><span class="rp-meta">'+[rev,pg].filter(Boolean).join(' · ')+'</span>';
-  a.onclick=function(e){e.preventDefault();m.scrollIntoView({behavior:'smooth',block:'center'});history.replaceState(null,'','#'+m.id);};
-  list.appendChild(a);
- });
-})();
 function goTo(e,pg){e.preventDefault();var el=document.getElementById('p'+pg);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});if(window.innerWidth<1180){/*keep open*/}}
 (function(){
  var links=[].slice.call(document.querySelectorAll('#toc a.toc-l1, #toc a'));
