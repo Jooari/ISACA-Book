@@ -19,6 +19,7 @@ p.cap{font-size:13.5px;color:#555;margin:6px 0 12px;}
 .tbl{border-collapse:collapse;width:100%;margin:12px 0 18px;font-size:13.5px;}
 .tbl th,.tbl td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left;}
 .tbl th{background:#eef2f8;font-weight:600;}
+.tbl td.hl{background:#d9e1f2;font-weight:600;}
 .cbox{border:1px solid var(--line);background:#f7f9fc;border-radius:6px;padding:12px 16px;margin:12px 0 18px;}
 .cbox ul,.cbox ol,ul.blist,ol.blist{margin:6px 0;padding-left:22px;}
 .cbox li,ul.blist li,ol.blist li{margin:5px 0;line-height:1.6;}
@@ -863,14 +864,14 @@ body.tocopen #doc{margin-left:440px;padding-left:72px;box-sizing:border-box;}
 <section class="page" id="p67" data-page="67">
 <p>나의 결함에서 함께 발생합니다. 학습 데이터의 출처를 추적·관리하지 않은 조직을 예로 <span class="rev-mark">들어 봅시다</span>. 이력 관리의 부재는 그 자체로 책임을 추적할 수 없게 만드는 거버넌스 위험입니다. 동시에 데이터가 오염·편향되었는지 검증할 수 없게 만들어 AI에 특화된 위험을 키우고, 그 데이터에 개인정보나 저작물이 섞여 있었다면 법적 위반이라는 <span class="rev-mark">또 다른 거버넌스 위험으로 번집니다</span>. 관리 하나가 빠진 자리에서 위험이 세 갈래로 퍼지는 것입니다.</p>
 <p>그래서 세 위험을 서로 다른 부서가 나눠 맡는 방식, 이를테면 보안팀이 전통 위험을, AI운영 팀이 AI 위험을, 준법팀이 거버넌스 위험을 따로 보는 방식은 구조적으로 불완전합니다. 한 결함 이 세 영역에 동시에 걸쳐 있는데 점검이 분리되어 있으면, 그 결함은 부서 사이의 빈틈으로 빠져나갑니다. AI 감사인의 역할은 바로 <span class="rev-mark">이 세 위험을 통합적으로 보는 데 있습니다</span>.</p>
-<p><strong>생애주기별로 본 세 위험 — 전체 지도</strong></p>
+<p><strong class="rev-mark">생애주기별로 본 세 위험 — 전체 지도</strong></p>
 <p>세 위험은 AI 시스템의 생애주기 어느 단계에서나 존재하지만, 단계마다 어느 위험이 지배적 인지는 달라집니다. 설계 단계에서는 거버넌스 위험이, 데이터·모델 단계에서는 AI 특화 위험 이, 운영 단계에서는 전통 위험과 AI 위험이 함께 두드러집니다. 다음 표는 이 책이 다루는 여섯 단계(4.2~4.7)에서 세 위험이 어떻게 분포하는지를 한눈에 보여주는 지도입니다. 처음 감사하는 사람은 이 표를 책 전체의 길잡이로 삼으면 됩니다.</p>
 
-<table class="tbl"><tr><th>생애주기 단계</th><th>전통적 위험</th><th>AI 특화 위험</th><th>거버넌스 위험</th><th>지배 위험</th></tr><tr><td>4.2 기획·설계</td><td>요구사항 정의 오류, 미인가 접근 (CWE- 285)</td><td>모델 오용 가능성, 윤리적 설계 부재</td><td>책임 구조·규제 적 용범위 미확정</td><td>거버넌스</td></tr><tr><td>4.3 데이터 수 집·전처리</td><td>저장소 암호화·권한 통제 미비 (CWE- 311)</td><td>데이터 오염, 편향 된 데이터셋</td><td>개인정보·저작권 적 법성, 출처 책임</td><td>AI+거버넌스</td></tr><tr><td>4.4 모델 개발· 훈련</td><td>오픈소스 공급망 취 약점 (CWE-1104)</td><td>모델 추출 공격, 블랙박스 불투명성</td><td>설명책임, 알고리즘 책임성</td><td>AI+거버넌스</td></tr><tr><td>4.5 검증·테스트</td><td>예외 처리 미흡, 성 능 저하 (CWE-754)</td><td>적대적 프롬프트, 견고성 미달</td><td>직무분리·검증 독립 성·승인권한 적정성</td><td>AI+거버넌스</td></tr><tr><td>4.6 배포·운영</td><td>웹·API 보안 (OWASP, CWE-20)</td><td>프롬프트 인젝션, 민감정보 추론</td><td>운영 보안 관리체계 인증</td><td>전통+AI</td></tr></table>
+<table class="tbl"><tr><th>생애주기 단계</th><th>전통적 위험</th><th>AI 특화 위험</th><th>거버넌스 위험</th><th>지배 위험</th></tr><tr><td>4.2 기획·설계</td><td>요구사항 정의 오류, 미인가 접근 (CWE- 285)</td><td>모델 오용 가능성, 윤리적 설계 부재</td><td class="hl">책임 구조·규제 적 용범위 미확정</td><td>거버넌스</td></tr><tr><td>4.3 데이터 수 집·전처리</td><td>저장소 암호화·권한 통제 미비 (CWE- 311)</td><td class="hl">데이터 오염, 편향 된 데이터셋</td><td class="hl">개인정보·저작권 적 법성, 출처 책임</td><td>AI+거버넌스</td></tr><tr><td>4.4 모델 개발· 훈련</td><td>오픈소스 공급망 취 약점 (CWE-1104)</td><td class="hl">모델 추출 공격, 블랙박스 불투명성</td><td class="hl">설명책임, 알고리즘 책임성</td><td>AI+거버넌스</td></tr><tr><td>4.5 검증·테스트</td><td>예외 처리 미흡, 성 능 저하 (CWE-754)</td><td class="hl">적대적 프롬프트, 견고성 미달</td><td class="hl">직무분리·검증 독립 성·승인권한 적정성</td><td>AI+거버넌스</td></tr><tr><td>4.6 배포·운영</td><td class="hl">웹·API 보안 (OWASP, CWE-20)</td><td class="hl">프롬프트 인젝션, 민감정보 추론</td><td>운영 보안 관리체계 인증</td><td>전통+AI</td></tr></table>
 <div class="pno">— p.67 —</div>
 </section>
 <section class="page" id="p68" data-page="68">
-<table class="tbl"><tr><th>4.7 모니터링·폐 기</th><th>로그 관리·자원 누수 (CWE-772)</th><th>모델 드리프트</th><th>사후 책임 지속, 영향평가 의무</th><th>AI+거버넌스</th></tr></table>
+<table class="tbl"><tr><td>4.7 모니터링·폐 기</td><td>로그 관리·자원 누수 (CWE-772)</td><td class="hl">모델 드리프트</td><td class="hl">사후 책임 지속, 영향평가 의무</td><td>AI+거버넌스</td></tr></table>
 <p>표를 세로로 읽으면 한 가지 흐름이 보입니다. 거버넌스 위험은 한 단계에 머물지 않고 설계(4.2), 검증(4.5), 사후(4.7) 세 지점에서 거듭 솟아오릅니다. 다만 같은 거버넌스 위험이라도 시점에 따라 성격이 다릅니다. 4.2는 시스템을 만들기 전에 책임과 규제의 토대를 세우는 일이고, 4.5는 배포 직전에 이 모델을 운영에 내보내도 되는지 판정하는 일회성 관문이며, 4.7은 배포 후 시스템이 계속 안전한지 지속적으로 감시하는 일입니다. 같은 위험이라도 단계마다 다른 방법으로 통제해야 한다는 것, 이것이 생애주기 접근이 필요한 이유입니다.</p>
 <p><strong>이 책의 활용 가이드</strong></p>
 <p><span class="rev-mark">4.3절부터 4.8절까지, 각 절은 다음과 같은 동일한 내부 구조를 따릅니다.</span></p>
