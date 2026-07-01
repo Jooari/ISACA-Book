@@ -1082,13 +1082,13 @@ body.tocopen #doc{margin-left:440px;padding-left:72px;box-sizing:border-box;}
 <p>모델을 학습하면, 특정 집단에서 오진이 발생할 수 있습니다.</p>
 <p>(5) 분포 편향(Distribution Bias) 학습 데이터의 분포가 실제 운영 환경의 분포와 다를 때 발생합니다. 학술 논문에서는 이를 데이터셋 시프트(Dataset Shift)라고도 부릅니다. 특정 지역이나 계층에서만 수집된 데이터로 학습된 모델을 전국 단위로 배포할 경우 편향이 증폭됩니다.</p>
 <p><strong> 5.2.2 알고리즘 편향(Algorithmic Bias) </strong> 데이터가 균형 잡혀 있더라도 알고리즘의 수학적 설계 자체가 편향을 유발할 수 있습니다.</p>
-<p>1. 최적화 목표의 편향: 전체 정확도(Overall Accuracy)를 극대화하는 알고리즘은 소수 집단의 성능을 희생하는 경향이 있습니다. 다수 집단이 데이터의 대부분을 차지할 경 우, 소수 집단의 예측 오류는 전체 지표에 미미한 영향을 주기 때문입니다.</p>
-<p>2. 피드백 루프(Feedback Loop): AI 예측이 현실의 의사결정에 반영되고, 그 결과가 다 시 학습 데이터로 사용될 때 편향이 자기강화(Self-Reinforcing) 방식으로 증폭됩니다. 예측 치안(Predictive Policing) 시스템에서 특정 지역에 더 많은 경찰력을 배치하면 해당 지역에서 더 많은 체포 데이터가 생성되어 기존 편향이 반복됩니다.</p>
-<p>3. 특성 선택(Feature Selection)의 편향: 모델 입력 변수에 민감 속성(인종·성별)을 직접 포함하지 않더라도, 해당 속성과 상관관계가 높은 대리 변수(Proxy Variable)가 포함 될 경우 간접적으로 차별이 발생합니다. 예를 들어, 우편번호나 학교 이름은 인종과 강한 상관관계를 가질 수 있습니다.</p>
+<p><span class="rev-mark">•</span> 최적화 목표의 편향: 전체 정확도(Overall Accuracy)를 극대화하는 알고리즘은 소수 집단의 성능을 희생하는 경향이 있습니다. 다수 집단이 데이터의 대부분을 차지할 경 우, 소수 집단의 예측 오류는 전체 지표에 미미한 영향을 주기 때문입니다.</p>
+<p><span class="rev-mark">•</span> 피드백 루프(Feedback Loop): AI 예측이 현실의 의사결정에 반영되고, 그 결과가 다 시 학습 데이터로 사용될 때 편향이 자기강화(Self-Reinforcing) 방식으로 증폭됩니다. 예측 치안(Predictive Policing) 시스템에서 특정 지역에 더 많은 경찰력을 배치하면 해당 지역에서 더 많은 체포 데이터가 생성되어 기존 편향이 반복됩니다.</p>
+<p><span class="rev-mark">•</span> 특성 선택(Feature Selection)의 편향: 모델 입력 변수에 민감 속성(인종·성별)을 직접 포함하지 않더라도, 해당 속성과 상관관계가 높은 대리 변수(Proxy Variable)가 포함 될 경우 간접적으로 차별이 발생합니다. 예를 들어, 우편번호나 학교 이름은 인종과 강한 상관관계를 가질 수 있습니다.</p>
 <p><strong> 5.2.3 인간·조직 편향(Human &amp; Organizational Bias) </strong> AI 개발과 운영 과정에 참여하는 인간의 주관적 판단이 편향을 주입할 수 있습니다.</p>
-<p>4. 확인 편향(Confirmation Bias): 개발자가 자신의 선입견에 부합하는 방식으로 데이터 를 선택하거나 모델을 평가하는 경향</p>
-<p>5. 자동화 편향(Automation Bias): AI의 결정을 인간이 무비판적으로 수용하는 현상. 인 간 감독자가 AI 출력을 검증하지 않으면 편향이 더욱 확대됩니다.</p>
-<p>6. 팀 동질성 편향(Homogeneity Bias): AI 개발팀이 특정 성별·인종·문화권으로 구성될 경우, 다양한 사용자 집단의 요구와 위험이 설계 단계에서 간과됩니다.</p>
+<p><span class="rev-mark">•</span> 확인 편향(Confirmation Bias): 개발자가 자신의 선입견에 부합하는 방식으로 데이터 를 선택하거나 모델을 평가하는 경향</p>
+<p><span class="rev-mark">•</span> 자동화 편향(Automation Bias): AI의 결정을 인간이 무비판적으로 수용하는 현상. 인 간 감독자가 AI 출력을 검증하지 않으면 편향이 더욱 확대됩니다.</p>
+<p><span class="rev-mark">•</span> 팀 동질성 편향(Homogeneity Bias): AI 개발팀이 특정 성별·인종·문화권으로 구성될 경우, 다양한 사용자 집단의 요구와 위험이 설계 단계에서 간과됩니다.</p>
 
 <div class="pno">— p.85 —</div>
 </section>
@@ -1141,23 +1141,23 @@ body.tocopen #doc{margin-left:440px;padding-left:72px;box-sizing:border-box;}
 </ul></div>
 <p>감사인은 조직이 각 단계에서 어떤 기법을 적용하였는지, 그 효과를 검증하였는지 확인해야 합니다.</p>
 <p><strong> 5.5.1 전처리 기법(Pre-processing) </strong></p>
-<p>7. 재샘플링(Resampling): 과소 대표된 집단의 샘플을 증가시키거나(Oversampling) 과 대 대표된 집단을 줄여(Undersampling) 균형을 맞춥니다.</p>
-<p>8. 재가중치 부여(Reweighting): 불리한 집단의 샘플에 높은 가중치를 부여하여 학습 시 동등한 영향력을 갖도록 합니다. IBM AIF360의 Reweighing 알고리즘이 대표적입니다.</p>
-<p>9. 데이터 증강(Data Augmentation): 소수 집단에 해당하는 합성 데이터를 생성하여 다 양성을 확보합니다.</p>
-<p>10. 편향 제거 전처리(Disparate Impact Remover): 특성 분포를 변환하여 민감 속성과의 상관관계를 약화시킵니다.</p>
+<p><span class="rev-mark">•</span> 재샘플링(Resampling): 과소 대표된 집단의 샘플을 증가시키거나(Oversampling) 과 대 대표된 집단을 줄여(Undersampling) 균형을 맞춥니다.</p>
+<p><span class="rev-mark">•</span> 재가중치 부여(Reweighting): 불리한 집단의 샘플에 높은 가중치를 부여하여 학습 시 동등한 영향력을 갖도록 합니다. IBM AIF360의 Reweighing 알고리즘이 대표적입니다.</p>
+<p><span class="rev-mark">•</span> 데이터 증강(Data Augmentation): 소수 집단에 해당하는 합성 데이터를 생성하여 다 양성을 확보합니다.</p>
+<p><span class="rev-mark">•</span> 편향 제거 전처리(Disparate Impact Remover): 특성 분포를 변환하여 민감 속성과의 상관관계를 약화시킵니다.</p>
 <p><strong> 5.5.2 처리 중 기법(In-processing) </strong></p>
-<p>11. 공정성 제약 학습(Fairness-Constrained Learning): 목적함수에 공정성 제약을 포함 시켜 학습 과정에서 편향을 최소화합니다. Zafar et al.(2017)의 'Fairness Constraints' 방법론 등이 있습니다.</p>
-<p>12. 적대적 학습(Adversarial Debiasing): 모델이 예측력을 유지하면서 민감 속성을 분리 하도록 적대적 네트워크를 활용합니다.</p>
-<p>13. 공정성 인식 정규화(Prejudice Remover): 모델의 민감 속성 의존도에 패널티를 부과 하는 정규화 항을 추가합니다.</p>
+<p><span class="rev-mark">•</span> 공정성 제약 학습(Fairness-Constrained Learning): 목적함수에 공정성 제약을 포함 시켜 학습 과정에서 편향을 최소화합니다. Zafar et al.(2017)의 'Fairness Constraints' 방법론 등이 있습니다.</p>
+<p><span class="rev-mark">•</span> 적대적 학습(Adversarial Debiasing): 모델이 예측력을 유지하면서 민감 속성을 분리 하도록 적대적 네트워크를 활용합니다.</p>
+<p><span class="rev-mark">•</span> 공정성 인식 정규화(Prejudice Remover): 모델의 민감 속성 의존도에 패널티를 부과 하는 정규화 항을 추가합니다.</p>
 <p><strong> 5.5.3 후처리 기법(Post-processing) </strong></p>
-<p>14. 임계값 조정(Threshold Adjustment): 집단별 분류 임계값을 다르게 설정하여 FPR 또 는 TPR의 균형을 맞춥니다. 예: 집단 A의 임계값은 0.5, 집단 B의 임계값은 0.45로</p>
+<p><span class="rev-mark">•</span> 임계값 조정(Threshold Adjustment): 집단별 분류 임계값을 다르게 설정하여 FPR 또 는 TPR의 균형을 맞춥니다. 예: 집단 A의 임계값은 0.5, 집단 B의 임계값은 0.45로</p>
 
 <div class="pno">— p.90 —</div>
 </section>
 <section class="page" id="p91" data-page="91">
 <p>설정.</p>
-<p>15. 보정(Calibration Adjustment): 예측 확률이 집단 간에 동일한 의미를 갖도록 확률 값 을 재조정합니다.</p>
-<p>16. 거부 학습(Reject Option Classification): 모델 신뢰도가 낮은 구간에서 불리한 집단 에게 유리한 방향으로 결정을 내리는 방법입니다.</p>
+<p><span class="rev-mark">•</span> 보정(Calibration Adjustment): 예측 확률이 집단 간에 동일한 의미를 갖도록 확률 값 을 재조정합니다.</p>
+<p><span class="rev-mark">•</span> 거부 학습(Reject Option Classification): 모델 신뢰도가 낮은 구간에서 불리한 집단 에게 유리한 방향으로 결정을 내리는 방법입니다.</p>
 <p>완화 기법 선택 시 감사인의 확인 사항</p>
 <p>• 어떤 완화 기법을 선택하였으며, 그 선택의 근거가 문서화되어 있는가?</p>
 <p>• 완화 기법 적용 전후의 편향 지표 변화가 측정되고 보고되었는가?</p>
@@ -1189,29 +1189,29 @@ body.tocopen #doc{margin-left:440px;padding-left:72px;box-sizing:border-box;}
 <h3> 5.8 AI 편향성 감사 실무 방법론 </h3>
 <p><strong> 5.8.1 감사 범위 및 계획 수립 </strong> AI 편향성 감사를 시작하기 전에 감사인은 다음을 명확히 설정해야 합니다: ① AI 시스템의 의사 결정 유형과 영향을 받는 이해관계자, ② 법적으로 보호되는 속성(민감 속성), ③ 적용 가능한 공정성 기준 및 규제 요건, ④ 편향성 측정에 필요한 데이터 접근 권한.</p>
 <p><strong> 5.8.2 데이터 편향 감사 </strong> 훈련 데이터와 운영 데이터에 대해 다음 항목을 검토합니다.</p>
-<p>17. 데이터 수집 과정에서 특정 집단이 과소/과대 대표되지 않았는지</p>
-<p>18. 레이블링(Labeling) 과정에서 주관적 편향이 개입하지 않았는지</p>
-<p>19. 민감 속성과 상관관계가 높은 대리 변수가 포함되어 있는지</p>
-<p>20. 데이터의 출처·수집 기간·지리적 범위가 운영 환경을 대표하는지</p>
-<p>21. 데이터 불균형 현황(집단별 샘플 수, 비율) 문서화 여부</p>
+<p><span class="rev-mark">•</span> 데이터 수집 과정에서 특정 집단이 과소/과대 대표되지 않았는지</p>
+<p><span class="rev-mark">•</span> 레이블링(Labeling) 과정에서 주관적 편향이 개입하지 않았는지</p>
+<p><span class="rev-mark">•</span> 민감 속성과 상관관계가 높은 대리 변수가 포함되어 있는지</p>
+<p><span class="rev-mark">•</span> 데이터의 출처·수집 기간·지리적 범위가 운영 환경을 대표하는지</p>
+<p><span class="rev-mark">•</span> 데이터 불균형 현황(집단별 샘플 수, 비율) 문서화 여부</p>
 <p><strong> 5.8.3 모델 공정성 감사 </strong> 학습된 모델과 배포된 시스템에 대해 다음 항목을 평가합니다.</p>
-<p>22. 집단별 성능 분리 평가: 전체 정확도뿐만 아니라 민감 속성에 따른 하위 집단별 정확도(Accuracy), 재현율(Recall), 정밀도(Precision), FPR, FNR을 각각 산출합니다.</p>
-<p>23. 공정성 측도 산출: Demographic Parity Difference, Equalized Odds Difference, Disparate Impact Ratio 등을 계산하고 허용 기준 초과 여부를 확인합니다.</p>
-<p>24. 임계값 민감도 분석: 분류 임계값 변화에 따른 집단별 성능 변화를 분석합니다.</p>
-<p>25. 교차성(Intersectionality) 분석: 단일 속성(예: 성별만)이 아니라 복합 속성(예: 흑인 여성)에 대한 편향을 분석합니다.</p>
-<p>26. 시간적 안정성 검토: 모델 성능과 공정성 지표가 시간이 지남에 따라 드리프트(Drift) 하지 않는지 모니터링 체계를 검토합니다.</p>
+<p><span class="rev-mark">•</span> 집단별 성능 분리 평가: 전체 정확도뿐만 아니라 민감 속성에 따른 하위 집단별 정확도(Accuracy), 재현율(Recall), 정밀도(Precision), FPR, FNR을 각각 산출합니다.</p>
+<p><span class="rev-mark">•</span> 공정성 측도 산출: Demographic Parity Difference, Equalized Odds Difference, Disparate Impact Ratio 등을 계산하고 허용 기준 초과 여부를 확인합니다.</p>
+<p><span class="rev-mark">•</span> 임계값 민감도 분석: 분류 임계값 변화에 따른 집단별 성능 변화를 분석합니다.</p>
+<p><span class="rev-mark">•</span> 교차성(Intersectionality) 분석: 단일 속성(예: 성별만)이 아니라 복합 속성(예: 흑인 여성)에 대한 편향을 분석합니다.</p>
+<p><span class="rev-mark">•</span> 시간적 안정성 검토: 모델 성능과 공정성 지표가 시간이 지남에 따라 드리프트(Drift) 하지 않는지 모니터링 체계를 검토합니다.</p>
 <p><strong> 5.8.4 거버넌스 및 프로세스 감사 </strong></p>
 
 <div class="pno">— p.94 —</div>
 </section>
 <section class="page" id="p95" data-page="95">
 <p>편향성 관리를 위한 조직 체계와 프로세스를 평가합니다.</p>
-<p>27. AI 개발 팀의 다양성(성별·인종·전문 배경) 현황</p>
-<p>28. 편향성 평가가 AI 개발 생애주기에 공식적으로 통합되어 있는지</p>
-<p>29. 편향 발생 시 에스컬레이션 절차와 시정 조치 프로세스</p>
-<p>30. 외부 독립 감사 또는 제3자 검증 실시 여부</p>
-<p>31. 이해관계자(특히 영향을 받는 집단) 참여 메커니즘</p>
-<p>32. AI 공정성 관련 직원 교육 실시 여부</p>
+<p><span class="rev-mark">•</span> AI 개발 팀의 다양성(성별·인종·전문 배경) 현황</p>
+<p><span class="rev-mark">•</span> 편향성 평가가 AI 개발 생애주기에 공식적으로 통합되어 있는지</p>
+<p><span class="rev-mark">•</span> 편향 발생 시 에스컬레이션 절차와 시정 조치 프로세스</p>
+<p><span class="rev-mark">•</span> 외부 독립 감사 또는 제3자 검증 실시 여부</p>
+<p><span class="rev-mark">•</span> 이해관계자(특히 영향을 받는 집단) 참여 메커니즘</p>
+<p><span class="rev-mark">•</span> AI 공정성 관련 직원 교육 실시 여부</p>
 
 <div class="pno">— p.95 —</div>
 </section>
@@ -1230,18 +1230,18 @@ body.tocopen #doc{margin-left:440px;padding-left:72px;box-sizing:border-box;}
 <h3> 5.10 편향성 감사 결과 보고 </h3>
 <p>편향성 감사 결과는 기술적 수치에 그치지 않고 실제 영향과 권고사항을 명확히 전달해야 합니다.</p>
 <p><strong> 5.10.1 편향성 감사 보고서 구성 </strong></p>
-<p>33. 요약(Executive Summary): 주요 발견사항과 리스크 수준을 경영진이 이해할 수 있는 언어로 기술</p>
-<p>34. 감사 범위 및 방법론: 대상 시스템, 적용 공정성 측도, 데이터 접근 방법, 사용 도구</p>
-<p>35. 공정성 측도 결과: 집단별 성능 지표 비교표, Demographic Parity Difference, Equalized Odds Difference 등 수치 포함</p>
-<p>36. 발견사항 및 위험 등급: 편향 발견 여부, 위험 수준(High/Medium/Low), 잠재적 영향 분석</p>
-<p>37. 근본 원인 분석: 데이터·알고리즘·거버넌스 중 어느 단계에서 편향이 발생하였는지</p>
-<p>38. 권고사항: 우선순위별 개선 조치, 담당 부서, 목표 완료일</p>
-<p>39. 모니터링 계획: 지속적 모니터링 지표, 주기, 재감사 기준</p>
+<p><span class="rev-mark">1.</span> 요약(Executive Summary): 주요 발견사항과 리스크 수준을 경영진이 이해할 수 있는 언어로 기술</p>
+<p><span class="rev-mark">2.</span> 감사 범위 및 방법론: 대상 시스템, 적용 공정성 측도, 데이터 접근 방법, 사용 도구</p>
+<p><span class="rev-mark">3.</span> 공정성 측도 결과: 집단별 성능 지표 비교표, Demographic Parity Difference, Equalized Odds Difference 등 수치 포함</p>
+<p><span class="rev-mark">4.</span> 발견사항 및 위험 등급: 편향 발견 여부, 위험 수준(High/Medium/Low), 잠재적 영향 분석</p>
+<p><span class="rev-mark">5.</span> 근본 원인 분석: 데이터·알고리즘·거버넌스 중 어느 단계에서 편향이 발생하였는지</p>
+<p><span class="rev-mark">6.</span> 권고사항: 우선순위별 개선 조치, 담당 부서, 목표 완료일</p>
+<p><span class="rev-mark">7.</span> 모니터링 계획: 지속적 모니터링 지표, 주기, 재감사 기준</p>
 <p><strong> 5.10.2 결과 전달 시 주의사항 </strong></p>
-<p>40. 수학적 지표를 구체적인 영향으로 번역하여 전달 (예: '집단 A에서 자격 있는 지원자 100명 중 20명이 추가로 부적합 판정')</p>
-<p>41. 공정성 지표 간 트레이드오프와 불가능성 정리에 대해 경영진이 이해할 수 있도록 설 명</p>
-<p>42. 단일 지표에 과도하게 최적화(Goodhart's Law)하는 위험성 경고</p>
-<p>43. 영향을 받는 집단의 관점을 정성적으로 포함</p>
+<p><span class="rev-mark">•</span> 수학적 지표를 구체적인 영향으로 번역하여 전달 (예: '집단 A에서 자격 있는 지원자 100명 중 20명이 추가로 부적합 판정')</p>
+<p><span class="rev-mark">•</span> 공정성 지표 간 트레이드오프와 불가능성 정리에 대해 경영진이 이해할 수 있도록 설 명</p>
+<p><span class="rev-mark">•</span> 단일 지표에 과도하게 최적화(Goodhart's Law)하는 위험성 경고</p>
+<p><span class="rev-mark">•</span> 영향을 받는 집단의 관점을 정성적으로 포함</p>
 
 <div class="pno">— p.98 —</div>
 </section>
