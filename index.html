@@ -737,8 +737,36 @@ body.tocopen #doc{margin-left:440px;padding-left:72px;box-sizing:border-box;}
 <section class="page" id="p53" data-page="53">
 <p><strong> 3.3.2. 글로벌 AI 규제를 거버넌스 구축에 활용하기 — 통합 적용 전략 </strong> Chapter 2에서 살펴본 EU AI Act, NIST AI RMF, ISO/IEC 42001, 한국 인공지능 기본법은 각각 ‘무엇을 규율하는가’가 다릅니다. 그러나 거버넌스 체계를 ‘구축’하는 실무자에게 더 중요한 질문은 ‘이 규제들을 어떻게 한 벌의 통제로 엮어 낼 것인가’입니다. 결론부터 말하면, 이들 규제는 서로 경쟁하는 선택지가 아니라 ‘쌓아 올리는 계층’으로 다루는 것이 효율적입니다.</p>
 <p>최근의 실무 크로스워크(crosswalk) 분석은 명확한 적용 순서를 제시합니다. ① ISO/IEC 42001로 경영시스템의 구조·문서·인증 틀을 세우고, ② NIST AI RMF의 Govern·Map·Measure·Manage 기능으로 위험관리 방법론을 채운 다음, ③ EU AI Act와 한국 AI 기본법의 고위험·고영향 강행 규정을 그 위에 적층하는 방식입니다.[22] 핵심은, ISO 42001 또는 NIST RMF를 충실히 구현하기만 해도 EU AI Act 요건의 약 60~70%가 자연스럽게 충족된다는 점입니다. 나머지 30~40%는 적합성 평가(Conformity Assessment), CE 마킹, EU 데이터베이스 등록, GPAI 투명성 의무처럼 EU 고유의 법적 절차로, 별도로 대응해야 합니다.[22]</p>
-<figure><img alt="[그림 3-4] 글로벌 규제·표준의 거버넌스 통합 적용 시퀀스" src="images/ch3-fig3-4.png"></figure>
-<p class="cap" style="text-align:center;">[그림 3-4] 글로벌 규제·표준의 거버넌스 통합 적용 시퀀스</p>
+<figure>
+<div style="display:flex;gap:14px;align-items:stretch;justify-content:center;text-align:left;">
+<div style="flex:1;display:flex;flex-direction:column;">
+<div style="background:#fce7d2;border:2px solid #e08a3c;border-radius:10px;padding:12px 16px;">
+<div style="font-weight:700;color:#b45309;font-size:14.5px;">③ 법적 의무 — EU AI Act · 한국 AI 기본법</div>
+<div style="font-size:12.5px;color:#5a4326;margin-top:4px;">고위험·고영향 시스템의 강행 규정(영향평가·사람감독·표시·문서보관) 적층</div>
+</div>
+<div style="text-align:center;color:#1F3864;font-size:20px;line-height:1.2;">↑</div>
+<div style="background:#dbe7f5;border:2px solid #5b8bc4;border-radius:10px;padding:12px 16px;">
+<div style="font-weight:700;color:#1F3864;font-size:14.5px;">② 방법론 — NIST AI RMF (Govern·Map·Measure·Manage)</div>
+<div style="font-size:12.5px;color:#33465e;margin-top:4px;">위험을 식별·측정·관리하는 절차와 공통 언어 — 어떻게 위험을 다룰지</div>
+</div>
+<div style="text-align:center;color:#1F3864;font-size:20px;line-height:1.2;">↑</div>
+<div style="background:#d7ece6;border:2px solid #3f9b86;border-radius:10px;padding:12px 16px;">
+<div style="font-weight:700;color:#1e6b5c;font-size:14.5px;">① 토대 — ISO/IEC 42001 (AI 경영시스템)</div>
+<div style="font-size:12.5px;color:#2c5148;margin-top:4px;">PDCA 기반 정책·역할·문서·인증 구조 수립 — 무엇을 '운영 체계'로 갖출지</div>
+</div>
+</div>
+<div style="width:92px;display:flex;flex-direction:column;">
+<div style="background:#c05a20;color:#fff;border-radius:10px;padding:12px 6px;text-align:center;font-weight:700;font-size:12.5px;line-height:1.4;">+30~40%<br>법규 적층</div>
+<div style="text-align:center;color:#1F3864;font-size:20px;line-height:1.2;">↑</div>
+<div style="flex:1;background:#2e8574;color:#fff;border-radius:10px;text-align:center;font-weight:700;font-size:13px;line-height:1.4;display:flex;align-items:center;justify-content:center;">60~70%<br>충족</div>
+</div>
+</div>
+<div style="border:1px solid var(--line);background:#f7f9fc;border-radius:6px;padding:10px 14px;margin-top:12px;text-align:left;">
+<div style="font-weight:700;font-size:13px;color:#1a1a1a;">적용 순서: ISO 42001로 구조를 세우고 → NIST RMF로 위험관리 방법을 채우고 → EU AI Act·한국 AI 기본법의 관할별 강행 규정을 더합니다.</div>
+<div style="font-size:12px;color:#555;margin-top:5px;">ISO 42001 또는 NIST RMF 구현만으로 EU AI Act 요건의 약 60~70%가 충족되며, 나머지 30~40%는 적합성 평가·CE 마킹 등 EU 고유 의무로 별도 대응합니다.</div>
+</div>
+</figure>
+<p class="cap" style="text-align:center;"><span class="rev-mark">[그림 3-4] 글로벌 규제·표준의 거버넌스 통합 적용 시퀀스</span></p>
 <p>이러한 계층 구조의 장점은 ‘중복 노력의 제거’입니다. 하나의 통제·정책·문서를 한 번 만들어 세 규제의 요구를 동시에 만족시킬 수 있기 때문입니다. 실제로 다수의 조항은 서로 대응(mapping)됩니다. 대표적인 매핑을 정리하면 다음과 같습니다.</p>
 <div class="pno">— p.53 —</div>
 </section>
@@ -761,8 +789,33 @@ body.tocopen #doc{margin-left:440px;padding-left:72px;box-sizing:border-box;}
 </section>
 <section class="page" id="p55" data-page="55">
 <p><strong> 3.3.3. 글로벌 AI 규제를 거버넌스 체계 구축에 활용하는 방법 </strong> Chapter 2에서 살펴본 EU AI Act, NIST AI RMF, ISO/IEC 42001은 각각 성격이 다릅니다. EU AI Act는 위험 기반 법규제이고, NIST AI RMF는 자율적 위험관리 프레임워크이며, ISO/IEC 42001은 AI 경영시스템 표준입니다. 그러나 조직 내부에서 이들을 활용할 때에는 서로 경쟁하는 기준으로 보지 말고, 하나의 통제 체계를 만드는 재료로 보아야 합니다. 핵심은 “규제를 준수하기 위해 무엇을 해야 하는가”에서 한 걸음 더 나아가 “이 규제가 요구하는 통제 요소를 조직의 어떤 절차와 증거로 구현할 것인가”를 묻는 것입니다.</p>
-<figure><img alt="[도식 3-4] 글로벌 규제를 조직 통제 언어로 번역하는 경로" src="images/ch3-dosik3-4.png"></figure>
-<p class="cap" style="text-align:center;">[도식 3-4] 글로벌 규제를 조직 통제 언어로 번역하는 경로</p>
+<figure>
+<div style="display:flex;align-items:center;gap:8px;text-align:center;">
+<div style="flex:1;display:flex;flex-direction:column;gap:7px;">
+<div style="border:1.5px solid #1F3864;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>EU AI Act</b><br>위험 등급·기술문서·투명성</div>
+<div style="border:1.5px solid #1F3864;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>NIST AI RMF</b><br>Govern-Map-Measure-Manage</div>
+<div style="border:1.5px solid #1F3864;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>ISO/IEC 42001</b><br>AI 경영시스템·SoA·내부심사</div>
+<div style="border:1.5px solid #1F3864;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>한국 AI 기본법</b><br>고영향·생성형 AI 고지·표시</div>
+<div style="border:1.5px solid #1F3864;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>싱가포르 Agentic AI</b><br>에이전트 경계·도구 사용 통제</div>
+<div style="border:1.5px solid #1F3864;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>ISACA·COBIT·AAIA</b><br>감사 기준·통제 라이브러리</div>
+</div>
+<div style="flex:0 0 16px;color:#1F3864;font-weight:700;font-size:16px;">→</div>
+<div style="flex:1.15;background:#dbe7f5;border:2px solid #5b8bc4;border-radius:14px;padding:14px 10px;">
+<div style="font-weight:700;color:#1F3864;font-size:13px;">공통 통제 어휘로 정규화</div>
+<div style="font-size:12px;color:#33465e;margin-top:8px;line-height:2;">위험 분류<br>책임 매트릭스<br>영향평가<br>데이터 계보<br>모델 카드<br>사람 감독<br>로그·모니터링</div>
+</div>
+<div style="flex:0 0 16px;color:#1F3864;font-weight:700;font-size:16px;">→</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:7px;">
+<div style="background:#eaf3ec;border:1.5px solid #7fae86;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>AI 인벤토리</b><br>전체 사용 현황</div>
+<div style="background:#eaf3ec;border:1.5px solid #7fae86;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>AIA·PIA</b><br>권리·안전 영향</div>
+<div style="background:#eaf3ec;border:1.5px solid #7fae86;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>RACI</b><br>최종 책임자</div>
+<div style="background:#eaf3ec;border:1.5px solid #7fae86;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>테스트·레드팀</b><br>배포 전 게이트</div>
+<div style="background:#eaf3ec;border:1.5px solid #7fae86;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>KRI 대시보드</b><br>운영 감시</div>
+<div style="background:#eaf3ec;border:1.5px solid #7fae86;border-radius:8px;padding:7px 5px;font-size:11.5px;line-height:1.35;"><b>감사 조서</b><br>증거와 결론</div>
+</div>
+</div>
+</figure>
+<p class="cap" style="text-align:center;"><span class="rev-mark">[도식 3-4] 글로벌 규제를 조직 통제 언어로 번역하는 경로</span></p>
 <p>EU AI Act는 AI 시스템을 위험 수준에 따라 분류하고, 고위험 AI에 기술문서, 위험관리, 데이터 거버넌스, 로그 기록, 투명성, 인간 감독, 정확성·견고성·사이버보안 요구사항을 부과합니다. 조직은 이를 단순히 EU 사업장의 준법 항목으로만 볼 것이 아니라, 전사 AI 인벤토리의 위험 분류 기준으로 활용할 수 있습니다. 즉, “우리 AI가 EU AI Act상 고위험에 해당하는가”라는 질문은 “우리 조직에서 강화된 승인과 증거가 필요한 AI인가”라는 내부 통제 질문으로 번역됩니다.</p>
 <p>NIST AI RMF는 Govern, Map, Measure, Manage라는 네 기능을 통해 AI 위험을 운영 언어로 정리합니다. 이 네 기능은 조직의 AI 거버넌스 순환 구조로 활용하기 좋습니다. Govern은 정책, 역할, 문화, 책임을 세우는 일입니다. Map은 사용 맥락, 이해관계자, 영향 범위를 식별하는 일입니다. Measure는 성능, 편향, 보안, 프라이버시, 설명 가능성을 측정하는 일입니다. Manage는 측정 결과를 바탕으로 위험을 완화하고, 잔여위험을 수용하고, 지속 개선하는 일입니다. 따라서 NIST AI RMF는 감사 프로그램의 큰 골격이 될 수 있습니다.</p>
 <p>ISO/IEC 42001은 이 운영 언어를 경영시스템으로 제도화하는 데 유용합니다. 조직은 AI 정책, 목표, 역할과 책임, 위험과 기회 평가, 운영 통제, 성과 평가, 내부심사, 시정조치, 지속 개선을 체계화할 수 있습니다. 특히 ISO/IEC 42001의 장점은 AI 거버넌스를 일회성 프로젝트가 아니라 반복 가능한 관리체계로 만든다는 점입니다. 인증을 받는 것이 목적이 될 수도 있지만, 더 중요한 것은 인증 범위와 실제 AI 사용 범위가 일치하는지, 통제가 실제 운영되는지, 내부심사와 경영검토가 개선으로 이어지는지를 확인하는 것입니다.</p>
