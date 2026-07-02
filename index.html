@@ -17,7 +17,7 @@ p.cap{font-size:13.5px;color:#555;margin:6px 0 12px;}
 .fnnote{border-top:1px solid var(--line);margin-top:22px;padding-top:8px;}
 .fnnote p{font-size:12.5px;color:#555;line-height:1.65;margin:0 0 5px;text-indent:-16px;padding-left:16px;word-break:break-all;text-align:left;}
 .fnnote sup{color:var(--navy);font-weight:600;margin-right:4px;}
-.tbl{border-collapse:collapse;width:100%;margin:12px 0 18px;font-size:13.5px;}
+.tbl{border-collapse:collapse;width:100%;margin:12px 0 18px;font-size:13.5px;break-inside:avoid;page-break-inside:avoid;}
 .tbl th,.tbl td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left;}
 .tbl th{background:#eef2f8;font-weight:600;}
 .tbl td.hl{background:#d9e1f2;font-weight:600;}
@@ -475,13 +475,11 @@ body.tocopen #doc{margin-left:440px;padding-left:72px;box-sizing:border-box;}
 <p>최근 EU AI Act의 의미가 더욱 커진 이유는 생성형 AI와 범용 AI 모델에 대한 규율이 본격화 되고 있기 때문입니다. 이제 규제의 대상은 개별 응용 서비스에 그치지 않고, 다양한 서비스의 기반이 되는 범용 모델과 공급망 전체로 확장되고 있습니다. 기술문서, 정보 제공, 저작권 정 책, 학습데이터 요약 공개, 위험평가, 사고보고, 사이버보안 등의 의무는 생성형 AI 시대에 규 제가 모델 생태계 전반으로 이동하고 있음을 보여줍니다.</p>
 <p>시행 일정 또한 단계적으로 설계되어 있습니다. EU AI Act는 2024년 8월 1일 발효되었고, 금지 관행과 AI 활용 역량 관련 의무는 2025년 2월부터, 범용 AI 모델 관련 의무는 2025년 8 월부터, 대부분의 일반 규정은 2026년 8월 2일부터 적용됩니다. 일부 제품 내장형 고위험 AI 등은 그보다 더 긴 전환 기간이 적용됩니다. 따라서 조직은 단번에 완전한 준수 상태에 도달 하기보다, 금지 영역 식별, 고위험 분류체계 정비, 문서화와 로그 관리, 감독과 보고체계 구축 순으로 준비 수준을 높여가야 합니다. 결국 EU AI Act는 가장 강한 법규제 모델이면서도, 조 직의 AI 거버넌스를 단계적으로 성숙시키도록 압박하는 제도라고 할 수 있습니다.</p>
 <p>다만 EU AI Act는 본질적으로 '무엇을 지켜야 하는가'를 중심으로 설계된 제도입니다. 실제 조직이 AI를 어떤 절차와 역할 체계 아래에서 관리해야 하는지, 위험을 어떻게 해석하고 운영 수준에서 통제해야 하는지에 대해서는 별도의 운영 프레임이 필요합니다. 바로 이 지점에서 미국의 NIST AI RMF와 ISO/IEC 42001이 중요한 보완축으로 등장합니다.</p>
-<p>[표 2-1] EU AI Act의 실무상 위험 구분</p>
-
-<table class="tbl"><tr><th>구분</th><th>핵심 의미</th><th>대표 예시 또는 의무</th></tr></table>
 <div class="pno">— p.28 —</div>
 </section>
 <section class="page" id="p29" data-page="29">
-<table class="tbl"><tr><th>금지되는 위험</th><th>기본권·안전·민주질서에 본질적으로 반하는 AI 관행</th><th>사회적 점수화, 특정 조작적 활용, 무 차별적 얼굴 이미지 수집, 직장·교육 기관 감정인식 등</th></tr><tr><td>고위험</td><td>건강·안전·기본권에 중대한 영향을 줄 수 있는 AI</td><td>고용, 교육, 중요 인프라, 필수 서비 스 접근, 법집행·사법 관련 활용 등</td></tr><tr><td>제한적 투명성 의무</td><td>이용자에게 AI 사용 사실 또는 생성물 특성을 알려야 하는 영역</td><td>챗봇 고지, 생성형 콘텐츠 라벨링 등</td></tr><tr><td>최소위험</td><td>원칙적으로 자유로운 사용이 허용 되는 영역</td><td>일반적 추천·보조 기능 등</td></tr></table>
+<p>[표 2-1] EU AI Act의 실무상 위험 구분</p>
+<table class="tbl"><tr><th>구분</th><th>핵심 의미</th><th>대표 예시 또는 의무</th></tr><tr><th>금지되는 위험</th><th>기본권·안전·민주질서에 본질적으로 반하는 AI 관행</th><th>사회적 점수화, 특정 조작적 활용, 무 차별적 얼굴 이미지 수집, 직장·교육 기관 감정인식 등</th></tr><tr><td>고위험</td><td>건강·안전·기본권에 중대한 영향을 줄 수 있는 AI</td><td>고용, 교육, 중요 인프라, 필수 서비 스 접근, 법집행·사법 관련 활용 등</td></tr><tr><td>제한적 투명성 의무</td><td>이용자에게 AI 사용 사실 또는 생성물 특성을 알려야 하는 영역</td><td>챗봇 고지, 생성형 콘텐츠 라벨링 등</td></tr><tr><td>최소위험</td><td>원칙적으로 자유로운 사용이 허용 되는 영역</td><td>일반적 추천·보조 기능 등</td></tr></table>
 <h3> 2.2 NIST AI RMF 및 ISO/IEC 42001(AIMS) </h3>
 <p>미국의 NIST AI RMF는 EU AI Act와 분명히 다른 성격을 가집니다. 이는 강행적 법규가 아니 라 자율적 위험관리 프레임워크입니다. 미국은 AI 관련 문제를 전면적 사전규제로 해결하기보 다, 조직이 AI 위험을 체계적으로 이해하고 관리할 수 있는 공통 언어와 운영 틀을 제공하는 데 더 큰 비중을 둡니다. 따라서 NIST AI RMF의 핵심은 위반 여부를 판별하는 데 있지 않고, 조직의 AI 위험관리 역량을 높이는 데 있습니다.</p>
 <p>NIST AI RMF는 Govern, Map, Measure, Manage의 네 가지 기능을 중심으로 구성됩니다. Govern은 정책, 책임, 문화, 교육, 감독체계를 의미하며 다른 모든 기능의 기반이 됩니다. Map은 AI 시스템의 목적, 맥락, 이해관계자, 사용환경, 잠재 영향을 식별하는 단계입니다. Measure는 성능, 안전성, 편향, 설명가능성, 보안성, 프라이버시와 같은 신뢰 속성을 시험하 고 검증하는 과정입니다. Manage는 측정된 위험을 우선순위화하고 대응 전략을 설계·실행하 며 지속적으로 개선하는 기능입니다. 이 구조는 AI를 단순한 기술이 아니라 위험관리 대상 시 스템으로 이해하도록 만들어 줍니다.</p>
